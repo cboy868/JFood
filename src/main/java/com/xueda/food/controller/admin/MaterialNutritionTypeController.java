@@ -1,4 +1,4 @@
-package com.xueda.food.controller;
+package com.xueda.food.controller.admin;
 
 import com.xueda.food.service.MaterialNutritionTypeService;
 import org.springframework.beans.factory.annotation.Autowired;

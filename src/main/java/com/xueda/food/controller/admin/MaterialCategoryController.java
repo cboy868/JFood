@@ -1,21 +1,25 @@
-package com.xueda.food.controller;
+package com.xueda.food.controller.admin;
 
+import com.xueda.food.model.entity.MaterialCategory;
 import com.xueda.food.service.MaterialCategoryService;
+import com.xueda.food.utils.JsonData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("material_category")
+@RequestMapping("api/v1/pri/material_category")
 public class MaterialCategoryController {
 
     @Autowired
     private MaterialCategoryService materialCategoryService;
 
-
     @RequestMapping("list")
-    public Object list()
+    public JsonData list()
     {
-        return materialCategoryService.list();
+        List<MaterialCategory> list = materialCategoryService.list();
+        return JsonData.success(list);
     }
 }

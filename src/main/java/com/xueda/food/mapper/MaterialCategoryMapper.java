@@ -1,6 +1,6 @@
 package com.xueda.food.mapper;
 
-import com.xueda.food.domain.MaterialCategory;
+import com.xueda.food.model.entity.MaterialCategory;
 
 import java.util.List;
 

@@ -1,6 +1,4 @@
-package com.xueda.food.domain;
-
-import java.io.Serializable;
+package com.xueda.food.model.entity;
 
 public class MaterialCategory {
 
