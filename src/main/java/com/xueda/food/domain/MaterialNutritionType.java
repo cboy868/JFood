@@ -1,4 +1,4 @@
-package com.xueda.food.dommain;
+package com.xueda.food.domain;
 
 public class MaterialNutritionType {
     private Integer id;
