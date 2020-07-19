@@ -4,6 +4,7 @@ import com.xueda.food.model.entity.MaterialCategory;
 import com.xueda.food.service.MaterialCategoryService;
 import com.xueda.food.utils.JsonData;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

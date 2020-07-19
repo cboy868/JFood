@@ -1,8 +1,8 @@
-package com.xueda.food.auth.model.entity;
+package com.xueda.food.model.entity;
 
 import java.util.Date;
 
-public class Admin {
+public class AdminUser {
     private Integer id;
 
     private String pinyin;
