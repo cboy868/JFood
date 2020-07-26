@@ -3,3 +3,6 @@
 .DS_store
 /target
 /.mvn
+/.classpath
+/.project
+/.settings
