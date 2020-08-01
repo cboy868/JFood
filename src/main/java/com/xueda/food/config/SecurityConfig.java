@@ -1,5 +1,10 @@
 package com.xueda.food.config;
 
+import javax.annotation.Resource;
+
+import com.xueda.food.config.auth.MyAuthenticationFailureHandler;
+import com.xueda.food.config.auth.MyAuthenticationSuccessHandler;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -14,6 +19,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Resource
+    MyAuthenticationSuccessHandler myAuthenticationSuccessHandler;
+
+    @Resource
+    MyAuthenticationFailureHandler myAuthenticationFailureHandler;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // http.httpBasic()
@@ -22,6 +33,8 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
         // .loginPage("/login.html")
         // .loginPage("/login")
         // .defaultSuccessUrl("/wansq")
+        .successHandler(myAuthenticationSuccessHandler)
+        .failureHandler(myAuthenticationFailureHandler)
             .and()
         .authorizeRequests()
         .antMatchers("/login.html", "/login").permitAll()
