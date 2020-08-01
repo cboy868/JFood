@@ -29,10 +29,14 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         // http.httpBasic()
         http
-        .formLogin()
+//                .csrf()
+//                .disable()
+                .formLogin()
+                .loginProcessingUrl("/login")
+                .usernameParameter("username")
+                .passwordParameter("password")
         // .loginPage("/login.html")
         // .loginPage("/login")
-        // .defaultSuccessUrl("/wansq")
         .successHandler(myAuthenticationSuccessHandler)
         .failureHandler(myAuthenticationFailureHandler)
             .and()
