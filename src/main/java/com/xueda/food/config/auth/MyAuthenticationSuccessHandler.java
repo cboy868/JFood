@@ -23,7 +23,6 @@ public class MyAuthenticationSuccessHandler extends SavedRequestAwareAuthenticat
             Authentication authentication) throws IOException, ServletException {
                 response.setContentType("application/json;charset=utf-8");
                 response.getWriter().write(objectMapper.writeValueAsString(JsonData.success()));
-
     }
     
 }

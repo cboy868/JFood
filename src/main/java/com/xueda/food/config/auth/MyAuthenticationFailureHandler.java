@@ -2,14 +2,15 @@ package com.xueda.food.config.auth;
 
 import java.io.IOException;
 
-import javax.naming.AuthenticationException;
+import com.xueda.food.utils.JsonData;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
+import org.springframework.stereotype.Component;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.xueda.food.utils.JsonData;
-import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
-import org.springframework.stereotype.Component;
 
 @Component
 public class MyAuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler{
@@ -20,7 +21,6 @@ public class MyAuthenticationFailureHandler extends SimpleUrlAuthenticationFailu
                                         HttpServletResponse response,
                                         AuthenticationException exception)
             throws IOException,ServletException {
-                System.out.println("这里进入了错误页面");
                 response.setContentType("application/json;charset=utf-8");
                 response.getWriter().write(objectMapper.writeValueAsString(JsonData.error("用户名或密码输入错误")));
     }

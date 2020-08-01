@@ -27,18 +27,16 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        // http.httpBasic()
         http
-//                .csrf()
-//                .disable()
+                .csrf()//不加这里，不走json，为啥呢
+                .disable()
                 .formLogin()
                 .loginProcessingUrl("/login")
                 .usernameParameter("username")
                 .passwordParameter("password")
-        // .loginPage("/login.html")
-        // .loginPage("/login")
-        .successHandler(myAuthenticationSuccessHandler)
-        .failureHandler(myAuthenticationFailureHandler)
+                .failureHandler(myAuthenticationFailureHandler)
+                .successHandler(myAuthenticationSuccessHandler)
+
             .and()
         .authorizeRequests()
         .antMatchers("/login.html", "/login").permitAll()
