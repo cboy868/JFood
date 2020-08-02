@@ -1,11 +1,11 @@
-package com.xueda.food.config.auth;
+package com.xueda.food.model.entity;
 
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class MyUserDetails implements UserDetails {
+public class AuthUserDetails implements UserDetails {
 
     /**
      *
@@ -67,5 +67,11 @@ public class MyUserDetails implements UserDetails {
 
     public void setAuthorities(Collection<? extends GrantedAuthority> authorities) {
         this.authorities = authorities;
+    }
+
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

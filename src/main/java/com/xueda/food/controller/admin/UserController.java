@@ -1,5 +1,14 @@
 package com.xueda.food.controller.admin;
 
+import java.util.List;
+
+import com.xueda.food.model.entity.AuthUser;
+import com.xueda.food.model.entity.AuthUserDetails;
+import com.xueda.food.service.AuthUserDetailsService;
+import com.xueda.food.service.AuthUserService;
+import com.xueda.food.utils.JsonData;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -7,18 +16,31 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserController {
 
+
+    @Autowired
+    private AuthUserDetailsService authUserDetailsService;
+
+    @Autowired
+    private AuthUserService authUserService;
+
     @GetMapping("/hello")
     @ResponseBody
     public String hello()
     {
-        return "hello user";
+        AuthUserDetails authUser = authUserDetailsService.findByUserName("wansq");
+
+        System.out.println(authUser.toString());
+
+
+        return "wansq";
     }
 
     @GetMapping("/world")
     @ResponseBody
-    public String world()
+    public JsonData world()
     {
-        return "world";
+        List<AuthUser> list = authUserService.list();
+        return JsonData.success(list);
     }
 
 
