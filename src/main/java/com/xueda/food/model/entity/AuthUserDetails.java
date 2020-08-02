@@ -12,9 +12,9 @@ public class AuthUserDetails implements UserDetails {
      */
     private static final long serialVersionUID = 1L;
 
-    private String password;
     private String name;
-    private Boolean isEnable;
+    private String password;
+    private Boolean isLock;
     
     Collection <? extends GrantedAuthority> authorities;//用户权限集合
 
@@ -50,7 +50,7 @@ public class AuthUserDetails implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return isEnable;
+        return !this.isLock;
     }
 
     public void setPassword(String password) {
@@ -61,17 +61,23 @@ public class AuthUserDetails implements UserDetails {
         this.name = name;
     }
 
-    public void setEnable(Boolean enable) {
-        isEnable = enable;
-    }
 
     public void setAuthorities(Collection<? extends GrantedAuthority> authorities) {
         this.authorities = authorities;
     }
 
+    public Boolean getIsLock() {
+        return isLock;
+    }
+
+    public void setIsLock(Boolean isLock) {
+        this.isLock = isLock;
+    }
 
     @Override
     public String toString() {
-        return super.toString();
+        return "AuthUserDetails [authorities=" + authorities + ", isLock=" + isLock
+                + ", name=" + name + ", password=" + password + "]";
     }
+
 }
