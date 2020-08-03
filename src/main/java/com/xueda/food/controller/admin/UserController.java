@@ -38,7 +38,7 @@ public class UserController {
 
         AuthUserDetails authUser = authUserDetailsService.findByUserName("wansq");
 
-        System.out.println(authUser.toString());
+        System.out.println(authUser.getPassword());
 
         System.out.print(passwordEncoder.encode("123456"));
 

@@ -3,6 +3,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.xueda.food.mapper.AuthUserDetailsMapper">
     <select id="findByUserName" resultType="AuthUserDetails">
-        SELECT * FROM admin_users where name=#{username}
+        SELECT name,password,is_lock FROM admin_users where name=#{username} and deleted_at is NULL
     </select>
 </mapper>
