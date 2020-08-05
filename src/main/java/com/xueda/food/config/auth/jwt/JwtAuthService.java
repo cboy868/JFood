@@ -31,10 +31,11 @@ public class JwtAuthService {
         try {
             UsernamePasswordAuthenticationToken upToken = 
             new UsernamePasswordAuthenticationToken(username, password);
-        System.out.println("what0");
-
     
             Authentication authentication = authenticationManager.authenticate(upToken);
+
+
+            System.out.println(authentication.getDetails());
 
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
@@ -43,11 +44,7 @@ public class JwtAuthService {
             throw new CustomException(CustomExceptionType.USER_INPUT_ERROR, e.getMessage());
         } 
 
-        System.out.println("what1");
-
-
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-
 
         return jwtTokenUtil.generateToken(userDetails);
     }

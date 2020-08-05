@@ -12,6 +12,7 @@ public class AuthUserDetails implements UserDetails {
      */
     private static final long serialVersionUID = 1L;
 
+    private Integer id;
     private String name;
     private String password;
     private Boolean isLock;
@@ -35,17 +36,17 @@ public class AuthUserDetails implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
@@ -74,10 +75,22 @@ public class AuthUserDetails implements UserDetails {
         this.isLock = isLock;
     }
 
+
+    
+
+    
     @Override
     public String toString() {
         return "AuthUserDetails [authorities=" + authorities + ", isLock=" + isLock
                 + ", name=" + name + ", password=" + password + "]";
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
 }
