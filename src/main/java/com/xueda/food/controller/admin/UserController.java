@@ -34,17 +34,8 @@ public class UserController {
     public String hello()
     {
 
+        return "hello";
 
-
-        AuthUserDetails authUser = authUserDetailsService.findByUserName("wansq");
-
-
-
-        if (passwordEncoder.encode("123456").equals(authUser.getPassword())) {
-            return "ok";
-        }
-
-        return "error";
     }
 
     @GetMapping("/world")

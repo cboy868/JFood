@@ -4,7 +4,8 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -13,12 +14,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-@ConfigurationProperties(prefix = "jwt")
 @Component
 public class JwtTokenUtil {
 
+
+    // @Value(value="${jwt.secret}")
+    // @org.springframework.beans.factory.annotation.Value
+    @Value(value = "${jwt.secret}")
     private String secret;
+
+    @Value(value = "${jwt.expiration}")
     private Long expiration;
+
+    @Value(value = "${jwt.header}")
     private String header;
 
 
@@ -32,6 +40,8 @@ public class JwtTokenUtil {
         Map<String, Object> claims = new HashMap<>(2);
         claims.put("sub", userDetails.getUsername());
         claims.put("created", new Date());
+
+        System.out.println("密码:" + secret);
 
         return generateToken(claims);
     }
@@ -67,6 +77,10 @@ public class JwtTokenUtil {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public String getHeader() {
+        return header;
     }
 
     /**

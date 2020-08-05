@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import com.xueda.food.config.auth.AuthUserDetailsService;
 import com.xueda.food.config.auth.MyAuthenticationFailureHandler;
 import com.xueda.food.config.auth.MyAuthenticationSuccessHandler;
+import com.xueda.food.config.auth.jwt.JwtAuthenticationTokenFilter;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +17,7 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 
 
@@ -31,9 +33,13 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Resource
     AuthUserDetailsService authUserDetailsService;
 
+    @Resource
+    private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+        .addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class)
                 .csrf()//不加这里，不走json，为啥呢
                 .disable()
                 .formLogin()
@@ -46,7 +52,7 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
             .and()
         .authorizeRequests()
         .antMatchers("/login.html", "/login", "/authentication").permitAll()
-        .antMatchers("/hello").permitAll()
+        .antMatchers("/hello").authenticated()
         //     .antMatchers("/hello")
         // .hasAnyAuthority("ROLE_user", "ROLE_admin")
         //     .antMatchers("/world")
