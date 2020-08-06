@@ -1,6 +1,6 @@
-package com.xueda.food.config.auth;
+package com.xueda.food.auth.service;
 
-import com.xueda.food.mapper.AuthUserMapper;
+import com.xueda.food.auth.mapper.AuthUserDetailsMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,11 +12,11 @@ import org.springframework.stereotype.Component;
 public class AuthUserDetailsService implements UserDetailsService {
 
     @Autowired
-    private AuthUserMapper authUserMapper;
+    private AuthUserDetailsMapper authUserDetailsMapper;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return authUserMapper.findByUserName(username);
+        return authUserDetailsMapper.findByUserName(username);
     }
     
 }

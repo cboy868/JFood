@@ -1,4 +1,4 @@
-package com.xueda.food.config.auth.jwt;
+package com.xueda.food.auth.utils;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

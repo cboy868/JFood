@@ -1,7 +1,8 @@
-package com.xueda.food.config.auth.jwt;
+package com.xueda.food.auth.service;
 
 import javax.annotation.Resource;
 
+import com.xueda.food.auth.utils.JwtTokenUtil;
 import com.xueda.food.expection.CustomException;
 import com.xueda.food.expection.CustomExceptionType;
 

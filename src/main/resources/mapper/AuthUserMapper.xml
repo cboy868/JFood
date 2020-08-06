@@ -6,7 +6,7 @@
         SELECT * FROM admin_users
     </select>
 
-    <select id="findByUserName" resultType="AuthUserDetails">
+    <!-- <select id="findByUserName" resultType="AuthUserDetails">
         SELECT id,name,password,is_lock FROM admin_users where name=#{username} and deleted_at is NULL
-    </select>
+    </select> -->
 </mapper>

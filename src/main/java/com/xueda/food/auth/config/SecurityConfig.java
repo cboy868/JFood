@@ -1,11 +1,9 @@
-package com.xueda.food.config;
+package com.xueda.food.auth.config;
 
 import javax.annotation.Resource;
 
-import com.xueda.food.config.auth.AuthUserDetailsService;
-import com.xueda.food.config.auth.MyAuthenticationFailureHandler;
-import com.xueda.food.config.auth.MyAuthenticationSuccessHandler;
-import com.xueda.food.config.auth.jwt.JwtAuthenticationTokenFilter;
+import com.xueda.food.auth.service.AuthUserDetailsService;
+import com.xueda.food.auth.filter.JwtAuthenticationTokenFilter;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,15 +19,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 
-
 @Configuration
 class SecurityConfig extends WebSecurityConfigurerAdapter {
-
-    @Resource
-    MyAuthenticationSuccessHandler myAuthenticationSuccessHandler;
-
-    @Resource
-    MyAuthenticationFailureHandler myAuthenticationFailureHandler;
 
     @Resource
     AuthUserDetailsService authUserDetailsService;
@@ -45,36 +36,16 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
         .and()
         .addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin()
-                // .loginProcessingUrl("/login")
-                // .usernameParameter("username")
-                // .passwordParameter("password")
-                // .failureHandler(myAuthenticationFailureHandler)
-                // .successHandler(myAuthenticationSuccessHandler)
-
             .and()
         .authorizeRequests()
         .antMatchers("/login.html", "/login", "/authentication").permitAll()
         .antMatchers("/hello").authenticated()
-        //     .antMatchers("/hello")
-        // .hasAnyAuthority("ROLE_user", "ROLE_admin")
-        //     .antMatchers("/world")
-        // .hasAnyRole("admin")
         .anyRequest()
         .authenticated();
 	}
 	
 	@Override
     public void configure (AuthenticationManagerBuilder auth) throws Exception {
-        // auth.inMemoryAuthentication()
-        // .withUser("user")
-        // .password(passwordEncoder().encode("123456"))
-        // .roles("user")
-        //     .and()
-        // .withUser("admin")
-        // .password(passwordEncoder().encode("123456"))
-        // .roles("admin")
-        //     .and()
-        // .passwordEncoder(passwordEncoder());
         auth.userDetailsService(authUserDetailsService)
             .passwordEncoder(passwordEncoder());
 

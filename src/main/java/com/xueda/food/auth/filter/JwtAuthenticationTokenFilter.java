@@ -1,4 +1,4 @@
-package com.xueda.food.config.auth.jwt;
+package com.xueda.food.auth.filter;
 
 import java.io.IOException;
 
@@ -9,7 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.mysql.cj.util.StringUtils;
-import com.xueda.food.config.auth.AuthUserDetailsService;
+import com.xueda.food.auth.service.AuthUserDetailsService;
+import com.xueda.food.auth.utils.JwtTokenUtil;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;

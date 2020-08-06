@@ -1,4 +1,4 @@
-package com.xueda.food.model.entity;
+package com.xueda.food.auth.model;
 
 import java.util.Collection;
 

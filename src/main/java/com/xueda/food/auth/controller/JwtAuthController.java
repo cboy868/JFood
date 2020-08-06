@@ -1,9 +1,10 @@
-package com.xueda.food.config.auth.jwt;
+package com.xueda.food.auth.controller;
 
 import java.util.Map;
 
 import javax.annotation.Resource;
 
+import com.xueda.food.auth.service.JwtAuthService;
 import com.xueda.food.utils.JsonData;
 
 import org.springframework.util.StringUtils;
