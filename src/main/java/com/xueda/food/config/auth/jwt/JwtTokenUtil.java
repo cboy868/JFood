@@ -40,9 +40,6 @@ public class JwtTokenUtil {
         Map<String, Object> claims = new HashMap<>(2);
         claims.put("sub", userDetails.getUsername());
         claims.put("created", new Date());
-
-        System.out.println("密码:" + secret);
-
         return generateToken(claims);
     }
 

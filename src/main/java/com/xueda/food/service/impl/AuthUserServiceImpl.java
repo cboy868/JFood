@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.xueda.food.mapper.AuthUserMapper;
 import com.xueda.food.model.entity.AuthUser;
+import com.xueda.food.model.entity.AuthUserDetails;
 import com.xueda.food.service.AuthUserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,11 @@ public class AuthUserServiceImpl implements AuthUserService {
     @Override
     public List<AuthUser> list() {
         return authUserMapper.list();
+    }
+
+    @Override
+    public AuthUserDetails findByUserName(String username) {
+        return authUserMapper.findByUserName(username);
     }
     
 }

@@ -5,8 +5,6 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import com.xueda.food.model.entity.AuthUser;
-import com.xueda.food.model.entity.AuthUserDetails;
-import com.xueda.food.service.AuthUserDetailsService;
 import com.xueda.food.service.AuthUserService;
 import com.xueda.food.utils.JsonData;
 
@@ -19,9 +17,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserController {
 
-
-    @Autowired
-    private AuthUserDetailsService authUserDetailsService;
 
     @Autowired
     private AuthUserService authUserService;

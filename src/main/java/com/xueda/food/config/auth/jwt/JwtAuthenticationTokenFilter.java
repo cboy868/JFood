@@ -14,8 +14,10 @@ import com.xueda.food.config.auth.AuthUserDetailsService;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+@Component
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
     @Resource
@@ -29,9 +31,12 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
                 String jwtToken = request.getHeader(jwtTokenUtil.getHeader());
+
+                System.out.println("abc:");
+                System.out.println(jwtToken);
                 if (!StringUtils.isNullOrEmpty(jwtToken)) {
                     String username = jwtTokenUtil.getUsernameFromToken(jwtToken);
-
+                    System.out.println("abc:"+username);
                     if (username != null && SecurityContextHolder.getContext().getAuthentication() ==null) {
                         UserDetails userDetails = authUserDetailsService.loadUserByUsername(username);
                         if (jwtTokenUtil.validateToken(username, userDetails)) {
