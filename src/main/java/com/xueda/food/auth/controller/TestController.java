@@ -1,6 +1,6 @@
 package com.xueda.food.auth.controller;
 
-import com.xueda.food.utils.JsonData;
+import com.xueda.food.core.utils.JsonData;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

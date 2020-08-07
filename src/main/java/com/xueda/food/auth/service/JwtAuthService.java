@@ -3,8 +3,8 @@ package com.xueda.food.auth.service;
 import javax.annotation.Resource;
 
 import com.xueda.food.auth.utils.JwtTokenUtil;
-import com.xueda.food.expection.CustomException;
-import com.xueda.food.expection.CustomExceptionType;
+import com.xueda.food.core.expection.CustomException;
+import com.xueda.food.core.expection.CustomExceptionType;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

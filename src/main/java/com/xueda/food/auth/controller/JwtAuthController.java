@@ -5,7 +5,7 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import com.xueda.food.auth.service.JwtAuthService;
-import com.xueda.food.utils.JsonData;
+import com.xueda.food.core.utils.JsonData;
 
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
