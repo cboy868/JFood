@@ -1,6 +1,6 @@
-package com.xueda.food.mapper;
+package com.xueda.food.material.mapper;
 
-import com.xueda.food.model.entity.MaterialCategory;
+import com.xueda.food.material.model.MaterialCategory;
 
 import java.util.List;
 

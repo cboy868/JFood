@@ -1,7 +1,7 @@
-package com.xueda.food.service.impl;
+package com.xueda.food.material.service.impl;
 
-import com.xueda.food.mapper.MaterialMapper;
-import com.xueda.food.service.MaterialService;
+import com.xueda.food.material.mapper.MaterialMapper;
+import com.xueda.food.material.service.MaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

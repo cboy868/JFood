@@ -1,6 +1,6 @@
-package com.xueda.food.service;
+package com.xueda.food.material.service;
 
-import com.xueda.food.model.entity.MaterialCategory;
+import com.xueda.food.material.model.MaterialCategory;
 
 import java.util.List;
 

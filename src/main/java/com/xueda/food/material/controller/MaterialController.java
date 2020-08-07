@@ -1,6 +1,6 @@
-package com.xueda.food.controller.admin;
+package com.xueda.food.material.controller;
 
-import com.xueda.food.service.MaterialService;
+import com.xueda.food.material.service.MaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;

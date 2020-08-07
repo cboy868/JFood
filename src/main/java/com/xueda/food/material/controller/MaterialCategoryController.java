@@ -1,7 +1,7 @@
-package com.xueda.food.controller.admin;
+package com.xueda.food.material.controller;
 
-import com.xueda.food.model.entity.MaterialCategory;
-import com.xueda.food.service.MaterialCategoryService;
+import com.xueda.food.material.model.MaterialCategory;
+import com.xueda.food.material.service.MaterialCategoryService;
 import com.xueda.food.utils.JsonData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

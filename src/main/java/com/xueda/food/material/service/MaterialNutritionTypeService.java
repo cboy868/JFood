@@ -1,4 +1,4 @@
-package com.xueda.food.service;
+package com.xueda.food.material.service;
 
 public interface MaterialNutritionTypeService {
 }
