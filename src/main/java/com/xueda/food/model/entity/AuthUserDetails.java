@@ -1,9 +1,9 @@
-package com.xueda.food.auth.model;
-
-import java.util.Collection;
+package com.xueda.food.model.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
 
 public class AuthUserDetails implements UserDetails {
 
