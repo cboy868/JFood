@@ -122,6 +122,39 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
+
+			<plugin>
+                <groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.4.0</version>
+				<executions>
+					<execution>
+					<id>Generate MyBatis Artifacts</id>
+					<goals>
+						<goal>generate</goal>
+					</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<!--允许移动⽣成的⽂件 -->
+					<verbose>true</verbose>
+					<!-- 是否覆盖 -->
+					<overwrite>true</overwrite>
+					<!-- ⾃动⽣成的配置 -->
+					<configurationFile>src/main/resources/config/generatorConfig.xml</configurationFile>
+				</configuration>
+				<dependencies>
+					<!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
+					<dependency>
+						<groupId>org.mybatis.generator</groupId>
+						<artifactId>mybatis-generator-core</artifactId>
+						<version>1.4.0</version>
+					</dependency>
+				</dependencies>
+            </plugin>
+
+			
 		</plugins>
 	</build>
 </project>

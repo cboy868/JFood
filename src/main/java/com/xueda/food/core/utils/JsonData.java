@@ -1,6 +1,5 @@
 package com.xueda.food.core.utils;
 
-
 public class JsonData {
 
     private Integer code;
