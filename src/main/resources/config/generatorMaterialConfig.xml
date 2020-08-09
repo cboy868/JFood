@@ -7,7 +7,7 @@
  <!--加载配置⽂件，为下⾯读取数据库信息准备-->
     <properties resource="application.properties"/>
 
-    <classPathEntry location="/Users/wansq/.m2/repository/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar" />
+    <!-- <classPathEntry location="/Users/wansq/.m2/repository/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar" /> -->
     <!--defaultModelType="flat" ⼤数据字段，不分表 -->
     <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
         <property name="autoDelimitKeywords" value="true" />
@@ -40,7 +40,7 @@
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <!-- ⽣成mapxml⽂件 -->
+        <!-- ⽣成map xml⽂件 -->
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources/mapper/material" >
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
@@ -50,8 +50,14 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
 
-        <table tableName="auth_roles" schema="INNODB" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        <table tableName="material" schema="INNODB" enableCountByExample="false" 
+        enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+        selectByExampleQueryId="false">
+            <property name="id" value=""/>
             <property name="name" value=""/>
+            <property name="category_id" value=""/>
+            <property name="cover"  value=""/>
+            <property name="intro" value="" />
         </table>
 
     </context>

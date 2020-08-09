@@ -1,14 +1,14 @@
-package com.xueda.food.material.model;
+package com.xueda.food.auth.model;
 
 import java.io.Serializable;
 import java.util.Date;
 
-public class AuthRoles implements Serializable {
+public class AuthRolePermissionsRel implements Serializable {
     private Integer id;
 
-    private String name;
+    private String roleId;
 
-    private Date deletedAt;
+    private String permissionCode;
 
     private Date createdAt;
 
@@ -24,20 +24,20 @@ public class AuthRoles implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getRoleId() {
+        return roleId;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setRoleId(String roleId) {
+        this.roleId = roleId == null ? null : roleId.trim();
     }
 
-    public Date getDeletedAt() {
-        return deletedAt;
+    public String getPermissionCode() {
+        return permissionCode;
     }
 
-    public void setDeletedAt(Date deletedAt) {
-        this.deletedAt = deletedAt;
+    public void setPermissionCode(String permissionCode) {
+        this.permissionCode = permissionCode == null ? null : permissionCode.trim();
     }
 
     public Date getCreatedAt() {
@@ -63,8 +63,8 @@ public class AuthRoles implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", name=").append(name);
-        sb.append(", deletedAt=").append(deletedAt);
+        sb.append(", roleId=").append(roleId);
+        sb.append(", permissionCode=").append(permissionCode);
         sb.append(", createdAt=").append(createdAt);
         sb.append(", updatedAt=").append(updatedAt);
         sb.append(", serialVersionUID=").append(serialVersionUID);

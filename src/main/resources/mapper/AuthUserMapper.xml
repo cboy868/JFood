@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.xueda.food.mapper.AuthUserMapper">
     <select id="list" resultType="AuthUser">
-        SELECT * FROM admin_users
+        SELECT * FROM auth_users
     </select>
 
     <!-- <select id="findByUserName" resultType="AuthUserDetails">
