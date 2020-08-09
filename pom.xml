@@ -142,7 +142,9 @@
 					<!-- 是否覆盖 -->
 					<overwrite>true</overwrite>
 					<!-- ⾃动⽣成的配置 -->
-					<configurationFile>src/main/resources/config/generatorConfig.xml</configurationFile>
+					<configurationFile>src/main/resources/config/generatorAuthConfig.xml</configurationFile>
+
+					<!-- <configurationFile>src/main/resources/config/generatorMaterialConfig.xml</configurationFile> -->
 				</configuration>
 				<dependencies>
 					<!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
