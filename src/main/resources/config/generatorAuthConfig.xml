@@ -7,7 +7,7 @@
  <!--加载配置⽂件，为下⾯读取数据库信息准备-->
     <properties resource="application.properties"/>
 
-    <classPathEntry location="/Users/wansq/.m2/repository/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar" />
+    <!-- <classPathEntry location="/Users/wansq/.m2/repository/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar" /> -->
     <!--defaultModelType="flat" ⼤数据字段，不分表 -->
     <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
         <property name="autoDelimitKeywords" value="true" />
