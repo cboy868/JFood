@@ -41,7 +41,7 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         </javaModelGenerator>
 
         <!-- ⽣成map xml⽂件 -->
-        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources/mapper/auth" >
+        <sqlMapGenerator targetPackage="auth" targetProject="src/main/resources/mapper" >
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 

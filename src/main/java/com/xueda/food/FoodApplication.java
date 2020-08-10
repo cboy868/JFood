@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan({"com.xueda.food.material.mapper","com.xueda.food.auth.mapper"})
+@MapperScan({"com.xueda.food.material.dao","com.xueda.food.auth.dao"})
 public class FoodApplication{
 
 	public static void main(String[] args) {

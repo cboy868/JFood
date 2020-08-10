@@ -1,4 +1,4 @@
-package com.xueda.food.material.mapper;
+package com.xueda.food.material.dao;
 
 import com.xueda.food.material.model.MaterialCategory;
 

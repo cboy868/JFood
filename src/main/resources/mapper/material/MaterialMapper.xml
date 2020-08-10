@@ -43,46 +43,4 @@
     select id, category_id, `name`, cover, deleted_at, created_at, updated_at, intro
     from material
   </select>
-  <resultMap id="BaseResultMap" type="com.xueda.food.material.model.Material">
-    <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="category_id" jdbcType="BIGINT" property="categoryId" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="cover" jdbcType="VARCHAR" property="cover" />
-    <result column="deleted_at" jdbcType="TIMESTAMP" property="deletedAt" />
-    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
-    <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt" />
-    <result column="intro" jdbcType="LONGVARCHAR" property="intro" />
-  </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from material
-    where id = #{id,jdbcType=BIGINT}
-  </delete>
-  <insert id="insert" parameterType="com.xueda.food.material.model.Material">
-    insert into material (id, category_id, `name`, 
-      cover, deleted_at, created_at, 
-      updated_at, intro)
-    values (#{id,jdbcType=BIGINT}, #{categoryId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, 
-      #{cover,jdbcType=VARCHAR}, #{deletedAt,jdbcType=TIMESTAMP}, #{createdAt,jdbcType=TIMESTAMP}, 
-      #{updatedAt,jdbcType=TIMESTAMP}, #{intro,jdbcType=LONGVARCHAR})
-  </insert>
-  <update id="updateByPrimaryKey" parameterType="com.xueda.food.material.model.Material">
-    update material
-    set category_id = #{categoryId,jdbcType=BIGINT},
-      `name` = #{name,jdbcType=VARCHAR},
-      cover = #{cover,jdbcType=VARCHAR},
-      deleted_at = #{deletedAt,jdbcType=TIMESTAMP},
-      created_at = #{createdAt,jdbcType=TIMESTAMP},
-      updated_at = #{updatedAt,jdbcType=TIMESTAMP},
-      intro = #{intro,jdbcType=LONGVARCHAR}
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
-    select id, category_id, `name`, cover, deleted_at, created_at, updated_at, intro
-    from material
-    where id = #{id,jdbcType=BIGINT}
-  </select>
-  <select id="selectAll" resultMap="BaseResultMap">
-    select id, category_id, `name`, cover, deleted_at, created_at, updated_at, intro
-    from material
-  </select>
 </mapper>
