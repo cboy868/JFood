@@ -25,4 +25,148 @@
     select role_id, user_id
     from auth_role_users_rel
   </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
+  <resultMap id="BaseResultMap" type="com.xueda.food.auth.model.AuthRoleUsersRel">
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xueda.food.auth.model.AuthRoleUsersRel">
+    insert into auth_role_users_rel (role_id, user_id)
+    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select role_id, user_id
+    from auth_role_users_rel
+  </select>
 </mapper>
