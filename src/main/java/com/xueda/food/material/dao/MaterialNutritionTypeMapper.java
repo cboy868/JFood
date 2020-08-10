@@ -1,4 +1,4 @@
-package com.xueda.food.material.mapper;
+package com.xueda.food.material.dao;
 
 public interface MaterialNutritionTypeMapper {
 }

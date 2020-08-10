@@ -1,4 +1,4 @@
-package com.xueda.food.auth.mapper;
+package com.xueda.food.auth.dao;
 
 import com.xueda.food.auth.model.AuthUserDetails;
 

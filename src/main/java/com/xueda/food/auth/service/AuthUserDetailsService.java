@@ -1,6 +1,6 @@
 package com.xueda.food.auth.service;
 
-import com.xueda.food.auth.mapper.AuthUserDetailsMapper;
+import com.xueda.food.auth.dao.AuthUserDetailsMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
