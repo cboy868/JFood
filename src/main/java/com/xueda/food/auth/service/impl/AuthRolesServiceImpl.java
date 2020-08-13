@@ -19,5 +19,15 @@ public class AuthRolesServiceImpl implements AuthRoleService {
     public List<AuthRoles> list() {
         return authRolesMapper.selectAll();
     }
+
+    @Override
+    public int insert(AuthRoles record) {
+        return authRolesMapper.insert(record);
+    }
+
+    @Override
+    public AuthRoles selectRoleById(Integer id) {
+        return authRolesMapper.selectRoleById(id);
+    }
     
 }

@@ -43,4 +43,7 @@ public interface AuthRolesMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(AuthRoles record);
+
+
+    AuthRoles selectRoleById(Integer id);
 }

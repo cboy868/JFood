@@ -2,6 +2,7 @@ package com.xueda.food.auth.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 public class AuthRoles implements Serializable {
     /**
@@ -21,6 +22,18 @@ public class AuthRoles implements Serializable {
      * @mbg.generated
      */
     private String name;
+
+
+
+    private Set<AuthRolePermissionsRel> permissions;
+
+    public Set<AuthRolePermissionsRel> getPermissions() {
+        return this.permissions;
+    }
+
+    public void setPermissions(Set<AuthRolePermissionsRel> permissions) {
+        this.permissions = permissions;
+    }
 
     /**
      *

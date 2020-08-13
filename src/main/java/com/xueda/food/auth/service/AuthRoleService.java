@@ -7,4 +7,8 @@ import com.xueda.food.auth.model.AuthRoles;
 public interface AuthRoleService {
     
     List<AuthRoles> list();
+
+    int insert(AuthRoles record);
+
+    AuthRoles selectRoleById(Integer id);
 }

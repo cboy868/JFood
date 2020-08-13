@@ -22,4 +22,20 @@ public class RoleController {
         List<AuthRoles> list = authRoleService.list();
         return JsonData.success(list);
     }
+
+
+    @RequestMapping("save")
+    public JsonData insert() {
+        // AuthRoles authRoles = new AuthRoles();
+        // authRoles.setId(2);
+        // authRoles.setName("管理员");
+        // Integer id = authRoleService.insert(authRoles);
+
+
+
+        AuthRoles authroles = authRoleService.selectRoleById(1);
+
+        return JsonData.success(authroles);
+
+    }
 }
